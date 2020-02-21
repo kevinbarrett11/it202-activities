@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Canvas Demo</title></head>
+    <body>
+        
+        <style>
+       
+
+        
+        </style>
+        <canvas id="canvas" width="400" height="400" border= "1px">
+             This will be displayed if your browser doesn't
+             support the canvas element. The closing tag is
+             necessary.
+        </canvas>
+        <script>
+        
+
+window.onload = function() {// make sure to use onload
+
+    background();
+    letter();
+    shape();
+    draw();
+    
+}
+
+
+
+function background(){
+    
+ var canvas = document.getElementById("canvas");
+ var ctx = canvas.getContext("2d");
+    
+
+ ctx.fillStyle = "blue";
+ ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    
+    
+}
+
+
+function letter(){
+    
+    var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+    
+
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(25, 105);
+    ctx.moveTo(25, 65);
+    ctx.lineTo(100, 25);
+    ctx.moveTo(25, 65);
+    ctx.lineTo(100, 105);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#ff0000';
+    ctx.stroke();
+    
+}
+
+
+ function shape(){
+    
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    
+    
+    ctx.fillStyle = 'orange';
+    ctx.fillRect(200, 200, 100, 100);
+ 
+}
+            
+  function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.fillStyle = "green";
+  ctx.font = '48px serif';
+  ctx.fillText('Hello world', 25, 350);
+}
+        
+        
+        </script>
+    </body>
+</html>
